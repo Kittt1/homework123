@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name" translatable="false">MyFirstProject</string>
+    <string name="go_to_login">Log In</string>
+</resources>
