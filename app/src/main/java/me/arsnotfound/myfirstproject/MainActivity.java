@@ -1,6 +1,5 @@
 package me.arsnotfound.myfirstproject;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -16,17 +15,14 @@ import me.arsnotfound.myfirstproject.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
-    private ActivityMainBinding binding;
-
-    private final ActivityResultLauncher<String> loginActivityLauncher = registerForActivityResult(new LoginActivity.LoginActivityContract(), creds -> {
-        Log.i(TAG, "Got credentials from login: " + creds.getUsername() + " " + creds.getPassword());
-    });
+    private final ActivityResultLauncher<String> loginActivityLauncher = registerForActivityResult(new LoginActivity.LoginActivityContract(), creds ->
+            Log.i(TAG, "Got credentials from login: " + creds.getUsername() + " " + creds.getPassword()));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         EdgeToEdge.enable(this);
