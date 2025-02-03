@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">MyFirstProject</string>
     <string name="go_to_login">Log In</string>
+    <string name="username" translatable="false">Username</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="continue1" translatable="false">Continue</string>
 </resources>
